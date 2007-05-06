@@ -3,7 +3,7 @@
 Summary:	Test::Unit::TestCase - unit testing framework base class
 Name:		perl-Test-Unit
 Version:	0.25
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/~mcast/Test-Unit-0.25/
@@ -32,6 +32,7 @@ find . -type f | xargs perl -p -i -e "s|^#\!/usr/local/bin/perl|#\!/usr/bin/perl
 
 %make OPTIMIZE="%{optflags}"
 
+%check
 # make test fails
 #make test
 
