@@ -11,7 +11,6 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/Test-Unit-%{version}
 BuildRequires:	perl-devel
 #BuildRequires:	perl-Class-Inner
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Test::Unit::TestCase is the 'workhorse' of the PerlUnit framework.
