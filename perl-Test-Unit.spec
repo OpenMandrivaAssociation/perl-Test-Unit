@@ -3,7 +3,7 @@
 Summary:	Test::Unit::TestCase - unit testing framework base class
 Name:		perl-Test-Unit
 Version:	0.25
-Release:	%mkrel 4
+Release:	%mkrel 6
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/~mcast/Test-Unit-0.25/
