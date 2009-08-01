@@ -1,17 +1,20 @@
+%define upstream_name    Test-Unit
+%define upstream_version 0.25
+
 %define _requires_exceptions perl(Error)
 
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Test::Unit::TestCase - unit testing framework base class
-Name:		perl-Test-Unit
-Version:	0.25
-Release:	%mkrel 6
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/~mcast/Test-Unit-0.25/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/Test-Unit-%{version}.tar.bz2
-BuildRequires:	perl-devel
-#BuildRequires:	perl-Class-Inner
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Test::Unit::TestCase is the 'workhorse' of the PerlUnit framework.
@@ -21,7 +24,7 @@ test_* test methods, then do
 
 %prep
 
-%setup -q -n Test-Unit-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 # perl path hack
 find . -type f | xargs perl -p -i -e "s|^#\!/usr/local/bin/perl|#\!/usr/bin/perl|g"
@@ -50,4 +53,3 @@ find . -type f | xargs perl -p -i -e "s|^#\!/usr/local/bin/perl|#\!/usr/bin/perl
 %{perl_vendorlib}/Test/*.p*
 %{perl_vendorlib}/Test/Unit
 %{_mandir}/*/*
-
