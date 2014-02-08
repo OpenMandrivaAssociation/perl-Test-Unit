@@ -9,7 +9,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	7
+Release:	8
 
 Summary:	Test::Unit::TestCase - unit testing framework base class
 License:	GPL+ or Artistic
