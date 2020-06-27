@@ -10,7 +10,7 @@
 Summary:	Test::Unit::TestCase - unit testing framework base class
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	17
+Release:	18
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -32,10 +32,10 @@ find . -type f | xargs perl -p -i -e "s|^#\!/usr/local/bin/perl|#\!/usr/bin/perl
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make OPTIMIZE="%{optflags}"
+%make_build OPTIMIZE="%{optflags}"
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc AUTHORS ChangeLog Changes README doc examples
